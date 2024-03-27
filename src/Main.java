@@ -71,14 +71,44 @@ public class Main {
             System.out.println("Minimum: " + arithmetic.getMin());
             System.out.println("Maximum: " + arithmetic.getMax());
         } else {
-            MyMap<String, Integer> map = new MyMap<>();
-            map.put("One", 1);
-            map.put("Two", 2);
-            map.put("Three", 3);
-            System.out.println("Value corresponding to key 'Two': " + map.get("Two"));
-            System.out.println("Value corresponding to key 'Four': " + map.get("Four"));
-            System.out.println("Removing key 'Two', corresponding value: " + map.remove("Two"));
-            System.out.println("Value corresponding to key 'Two' after removal: " + map.get("Two"));
+            MyMap<Integer, String> map = new MyMap<>();
+            int key;
+            String value;
+
+            System.out.println("\nTesting put()...");
+            do{
+                System.out.print("Enter key: ");
+                key = sc.nextInt();
+                if(key == 0){
+                    break;
+                }
+                System.out.print("Enter string value: ");
+                sc.nextLine();
+                value = sc.nextLine();
+                map.put(key, value);
+
+                System.out.println("Current Keys and Values:");
+                System.out.println(map.keys);
+                System.out.println(map.values);
+            } while (true);
+
+            System.out.println("\nTesting get()...");
+            do{
+                System.out.print("Enter key: ");
+                key = sc.nextInt();
+                System.out.println("Value from key " + key + ": " + map.get(key));
+            } while (key != 0);
+
+            System.out.println("\nTesting remove()...");
+            do{
+                System.out.print("Enter key: ");
+                key = sc.nextInt();
+                System.out.println("Removed " + map.remove(key) + " from key " + key);
+
+                System.out.println("Current Keys and Values:");
+                System.out.println(map.keys);
+                System.out.println(map.values);
+            } while (key != 0);
         }
     }
 }

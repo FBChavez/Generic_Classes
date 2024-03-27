@@ -3,8 +3,8 @@ package Map;
 import java.util.ArrayList;
 
 public class MyMap<K, V> {
-    private ArrayList<K> keys;
-    private ArrayList<V> values;
+    public ArrayList<K> keys;
+    public ArrayList<V> values;
 
     public MyMap() {
         keys = new ArrayList<>();
