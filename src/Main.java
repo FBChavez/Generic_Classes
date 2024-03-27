@@ -75,6 +75,8 @@ public class Main {
             int key;
             String value;
 
+            // credits muna from our beloved nicole ejares
+
             System.out.println("\nTesting put()...");
             do{
                 System.out.print("Enter key: ");
